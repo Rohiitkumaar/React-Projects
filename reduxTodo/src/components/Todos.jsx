@@ -8,7 +8,6 @@ function Todos() {
 
   return (
     <>
-      <div>Todos</div>
       <ul className="list-none">
         {todos.map((todo) => (
           <li
@@ -16,6 +15,12 @@ function Todos() {
             key={todo.id}
           >
             <div className="text-white">{todo.text}</div>
+            <div className="buttons flex gap-3">
+              {/* <button
+                // onClick={() => dispatch(updateTodo())}
+                className="text-white bg-gray-500 border-0 py-1 px-4 focus:outline-none hover:bg-gray-600 rounded text-md">
+              📁
+            </button> */}
             <button
               onClick={() => dispatch(removeTodo(todo.id))}
               className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
@@ -35,6 +40,7 @@ function Todos() {
                 />
               </svg>
             </button>
+            </div>
           </li>
         ))}
       </ul>

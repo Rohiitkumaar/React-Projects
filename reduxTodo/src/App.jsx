@@ -7,7 +7,6 @@ function App() {
 
   return (
     <>
-      <h1>Redux Todo</h1>
       <AddTodo />
       <Todos/>
     </>
